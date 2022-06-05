@@ -1,6 +1,7 @@
 import React from 'react'
 import './MovieCard.css'
 import ReactStars from "react-rating-stars-component"
+import { Link } from 'react-router-dom'
 
 
 const MovieCard
@@ -21,11 +22,12 @@ const MovieCard
     
     <p className="information">{el.description}</p>
     <div className="control">
-      <button className="btn">
+      <Link to={`/movieDetails/${el.id}`}><button className="btn">
         
         
         <span className="btn1">Watch trailer</span>
       </button>
+      </Link>
     </div>
   </div>
   <div className="product-image">
